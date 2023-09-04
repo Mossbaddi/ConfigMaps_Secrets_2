@@ -18,6 +18,12 @@ docker build -t flask-app .
 kubectl apply -f postgresql-depl.yaml
 ```
 
+### Déployez votre secret postgresql avec kubernetes (avec les variables d'environnement requises que vous trouverez en bas de ce README)
+
+```bash
+kubectl apply -f postgresql-secret.yaml
+```
+
 ### Connectez-vous à votre BDD postgresql
 
 ```bash
@@ -52,3 +58,12 @@ curl http://localhost/add_user/<nom>
 
 - POSTGRES_USER=admin
 - POSTGRES_PASSWORD=secret
+
+## Configuration de la base de données
+
+### Variables d'environnement requises
+
+PG_USER=admin
+PG_PASSWORD=secret
+PG_HOST=postgresql
+PG_DB=mydatabase
