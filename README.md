@@ -44,3 +44,11 @@ kubectl apply -f flask-depl.yaml
 curl http://localhost/add_user/<nom> 
 ```
 
+
+
+## Configuration de la base de données
+
+### Variables d'environnement requises
+
+- POSTGRES_USER=admin
+- POSTGRES_PASSWORD=secret
